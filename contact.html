@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridal Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #ff9900;
+      color: black;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .btn {
+      background: black;
+      color: white;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: white;
+      color: black;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+  <section class="text-center py-24">
+    <h2 class="text-5xl font-bold font-playfair mb-12">Bridal Makeup</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+
+      <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Hyra facial Treatment" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Hyra Facial</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+
+      <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Pre bridal photoshoot" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Pre Bridal Photoshoot</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html#" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+
+      <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Golden,Peral,Sliver,etc" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Facial Treatments</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+
+      <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Hair Styling & Hair Treatments" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Hair Treatment</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+
+      <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Mehndi" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Mehndi</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html#" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+	  
+	   <div class="card rounded-lg p-6 shadow-lg text-center">
+        <img src="https://via.placeholder.com/80" alt="Nail Care" class="mx-auto mb-4"/>
+        <h3 class="text-2xl font-semibold">Pedicure Manicure</h3>
+        <a href="file:///D:/full/complete%20web%20development%20course/1-html/sarovaram1services.html#" class="btn px-6 py-2 mt-4 rounded-full inline-block">Book Now</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
