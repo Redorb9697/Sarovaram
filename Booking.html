@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #ff9900;
+    }
+  </style>
+</head>
+<body class="text-black">
+
+<section class="py-24 px-6">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Contact Info -->
+    <div class="bg-black text-white rounded-lg p-10 shadow-2xl">
+      <h2 class="text-4xl font-semibold mb-6 text-orange-400">Contact Information</h2>
+      <ul class="space-y-4 text-lg">
+        <li><strong>Phone:</strong> +917306213202</li>
+        <li><strong>Email:</strong> Sarovaram@gmail.com</li>
+        <li><strong>Address:</strong> Sarovaram Thachottukavu, Trivandrum, Kerala 695573</li>
+        <li>
+          <a href="#" class="text-orange-400 hover:text-orange-300 transition font-semibold">Instagram</a>
+        </li>
+        <li>
+          <a href="https://wa.me/917306213202" target="_blank" class="flex items-center space-x-2 text-green-400 hover:text-green-300 transition font-semibold">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" class="w-6 h-6" alt="WhatsApp" />
+            <span>Chat on WhatsApp</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+fe
+    <!-- Contact Form -->
+    <div class="bg-white rounded-lg p-10 shadow-2xl">
+      <h2 class="text-4xl font-semibold text-black mb-6">Get in Touch</h2>
+      <form id="whatsappForm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">First Name</label>
+            <input type="text" id="first_name" class="border-2 border-gray-300 rounded-lg p-3" required>
+          </div>
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">Last Name</label>
+            <input type="text" id="last_name" class="border-2 border-gray-300 rounded-lg p-3" required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input type="email" id="email" class="border-2 border-gray-300 rounded-lg p-3" required>
+          </div>
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" id="phone_number" class="border-2 border-gray-300 rounded-lg p-3" required>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-sm font-medium text-gray-700 mb-2">Select Subject</label>
+          <select id="subject" class="border-2 border-gray-300 rounded-lg p-3 w-full" required>
+            <option value="Makeup Style">Makeup Style</option>
+            <option value="Micro Blading">Micro Blading</option>
+            <option value="Hydra Facial">Hydra Facial</option>
+            <option value="Pedicure & Manicure">Pedicure & Manicure</option>
+            <option value="Hair Styling">Hair Styling</option>
+            <option value="Hair Spa">Hair Spa</option>
+            <option value="Facials">Facials</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">Appointment Date</label>
+            <input type="date" id="appointment_date" class="border-2 border-gray-300 rounded-lg p-3 w-full" required>
+          </div>
+          <div class="flex flex-col">
+            <label class="text-sm font-medium text-gray-700 mb-2">Appointment Time</label>
+            <input type="time" id="appointment_time" class="border-2 border-gray-300 rounded-lg p-3 w-full" required>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-sm font-medium text-gray-700 mb-2">Message</label>
+          <textarea id="message" rows="4" class="border-2 border-gray-300 rounded-lg p-3 w-full" required></textarea>
+        </div>
+
+        <button type="submit" class="bg-orange-700 text-white px-6 py-3 rounded-full text-lg font-semibold w-full hover:bg-orange-800 transition duration-300">Send to WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript to handle WhatsApp redirection -->
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById("first_name").value.trim();
+    const lastName = document.getElementById("last_name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone_number").value.trim();
+    const subject = document.getElementById("subject").value;
+    const date = document.getElementById("appointment_date").value;
+    const time = document.getElementById("appointment_time").value;
+    const message = document.getElementById("message").value.trim();
+
+    const fullMessage = `*New Appointment Booking*\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nAppointment Date: ${date}\nAppointment Time: ${time}\nMessage: ${message}`;
+
+    const encodedMessage = encodeURIComponent(fullMessage);
+    const whatsappNumber = "917306213202";
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+  });
+</script>
+
+</body>
+</html>
